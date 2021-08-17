@@ -1,0 +1,31 @@
+        <h7>
+          本月已上班{{header_month_hour}}小時{{header_month_minute}}分鐘
+        </h7>  <br> <br>    
+<table>
+
+      <thead>
+        <tr>
+          <th scope="col">日期</th>
+          <th scope="col">起始時間</th>
+          <th scope="col">結束時間</th>
+          <th scope="col">類型</th>
+          <th scope="col">累積時數</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for data in table_data %}  
+        <tr>
+          <td data-label="日期">{{data[0]}}</td>
+          <td data-label="起始時間">{{data[1]}}</td>
+          <td data-label="結束時間">{{data[2]}}</td>
+          <td data-label="類型">{{data[3]}}</td>
+          <td data-label="累積時數">{{data[4]}}小時{{data[5]}}分鐘</td>
+          <td data-label="刪除">
+            <button type="button" class="btn btn-outline-blue"><i class="fas fa-trash-alt"></i> </button>          
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>    
